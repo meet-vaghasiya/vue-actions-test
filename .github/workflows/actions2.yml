@@ -9,6 +9,11 @@ jobs:
         run: |
           pwd
           ls
+      - name: Checkout repo
+        uses: actions/checkout@v1
+      - name: Checkout after uses
+        run:
+          ls
       - name: Hello world javascript
         uses: actions/hello-world-javascript-action@v1
         with:
