@@ -10,6 +10,8 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: github paylad
+        run: echo ${{ github.event.client_payload.example-key }}
       - name: List file name
         run: |
           pwd
