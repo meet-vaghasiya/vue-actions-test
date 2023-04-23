@@ -1,8 +1,10 @@
 name: actions workflow 2
 # on: [push ,pull_request]
 on: 
-  schedule:
-    - cron: '* * * * *'
+  # schedule:
+  #   - cron: '* * * * *'
+  repository_dispatch:
+    types: [start-example-workflow]
 
 jobs:
   run-github-actions:
