@@ -3,8 +3,12 @@ name: actions workflow 2
 on: 
   # schedule:
   #   - cron: '* * * * *'
-  repository_dispatch:
-    types: [start-example-workflow]
+  # repository_dispatch:
+  #   types: [start-example-workflow]
+  push:
+    branches:
+      - "main"
+      - "dev"    
 
 jobs:
   run-github-actions:
