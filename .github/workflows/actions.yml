@@ -20,7 +20,7 @@ jobs:
             }' \
           --fail
       - name: Echo string
-        run: echo ${{ secrets }}
+        run: echo ${{ secrets.GITHUB_TOKEN  }}
   # run-shell-command: 
   #   runs-on: ubuntu-latest
   #   steps:
